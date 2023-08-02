@@ -4,7 +4,7 @@
 _Columbia University in the City of New York_
 
 
-[Project Page](https://roboreflect.github.io/) | [arXiV](https://arxiv.org/abs/2306.15724) | [Summary Video](https://www.youtube.com/watch?v=Proiua4NNTk)
+[Project Page](https://robot-reflect.github.io/) | [arXiV](https://arxiv.org/abs/2306.15724) | [Summary Video](https://www.youtube.com/watch?v=Proiua4NNTk)
 
 ---
 REFLECT is a framework that that leverages Large Language Models (LLMs) for robot failure explanation and correction, based on a summary of robot past experiences generated from multimodal sensory data. The framework is able to tackle both execution and planning failures across a veriety of tasks.
