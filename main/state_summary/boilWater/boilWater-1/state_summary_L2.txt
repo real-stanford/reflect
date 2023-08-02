@@ -1,0 +1,6 @@
+00:18. Goal: Pick up pot. Visual observation: pot (empty and clean). pot is inside robot gripper.
+00:25. Goal: Put pot inside sink. Visual observation: pot (empty and clean), faucet (turned off), sink. pot is inside sink. pot is on the right of soap bottle. nothing is inside robot gripper.
+00:28. Goal: Toggle on faucet. Visual observation: pot (filled with water and clean), faucet (turned on), sink. pot is inside sink. pot is on the right of soap bottle. nothing is inside robot gripper. Auditory observation: water runs in sink.
+00:31. Goal: Toggle off faucet. Visual observation: pot (filled with water and clean), faucet (turned off), sink. pot is inside sink. pot is on the right of soap bottle. nothing is inside robot gripper.
+00:41. Goal: Put pot on fourth stove burner. Visual observation: first stove burner (turned off), second stove burner (turned off), fourth stove burner (turned off), third stove burner (turned off). nothing is inside robot gripper.
+00:44. Goal: Toggle on fourth stove burner. Visual observation: first stove burner (turned off), fourth stove burner (turned on), second stove burner (turned off), third stove burner (turned off). nothing is inside robot gripper. Auditory observation: stove burner turns on.

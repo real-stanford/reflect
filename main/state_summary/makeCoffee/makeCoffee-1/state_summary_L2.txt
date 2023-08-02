@@ -1,0 +1,10 @@
+00:17. Goal: Pick up mug. Visual observation: mug (empty and dirty), faucet (turned off), sink. mug is inside robot gripper.
+00:29. Goal: Put mug inside sink. Visual observation: mug (empty and dirty), faucet (turned off), sink, coffee machine (turned off). mug is inside sink. nothing is inside robot gripper.
+00:32. Goal: Toggle on faucet. Visual observation: mug (empty and dirty), faucet (turned on), sink, coffee machine (turned off). mug is inside sink. nothing is inside robot gripper. Auditory observation: water runs in sink.
+00:35. Goal: Toggle off faucet. Visual observation: faucet (turned off), coffee machine (turned off), sink, mug (filled with water and clean). mug is inside sink. nothing is inside robot gripper.
+00:38. Goal: Pick up mug. Visual observation: faucet (turned off), coffee machine (turned off), sink, mug (filled with water and clean). mug is inside robot gripper.
+00:51. Goal: Put mug inside coffee machine. Visual observation: faucet (turned off), mug (empty and clean), sink, coffee machine (turned off). cup is inside coffee machine. mug is inside robot gripper.
+00:54. Goal: Toggle on coffee machine. Visual observation: faucet (turned off), coffee machine (turned on), mug (empty and clean), sink. cup is inside coffee machine. mug is inside robot gripper. Auditory observation: coffee machine turns on.
+00:57. Goal: Toggle off coffee machine. Visual observation: faucet (turned off), mug (empty and clean), sink, coffee machine (turned off). cup is inside coffee machine. mug is inside robot gripper.
+01:00. Goal: Pick up mug. Visual observation: faucet (turned off), mug (empty and clean), sink, coffee machine (turned off). cup is inside coffee machine. mug is inside robot gripper.
+01:19. Goal: Put mug on countertop. Visual observation: mug (empty and clean). mug is on the right of butter knife. mug is on top of first countertop. nothing is inside robot gripper.

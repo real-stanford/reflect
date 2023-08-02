@@ -1,0 +1,13 @@
+00:01. Action: Move to pot. Visual observation: nothing is inside robot gripper.
+00:11. Action: Move to pot. Visual observation: faucet (turned off). nothing is inside robot gripper.
+00:15. Action: Move to pot. Visual observation: pot (empty and clean). pot is on the left of potato. pot is on top of third countertop. nothing is inside robot gripper.
+00:18. Action: Pick up pot. Visual observation: pot (empty and clean). pot is inside robot gripper.
+00:21. Action: Move to sink. Visual observation: pot (empty and clean), faucet (turned off), sink. pot is inside robot gripper.
+00:22. Action: Move to sink. Visual observation: pot (empty and clean), faucet (turned off), sink. pot is inside robot gripper.
+00:25. Action: Put pot inside sink. Visual observation: pot (empty and clean), faucet (turned off), sink. pot is inside sink. pot is on the right of soap bottle. nothing is inside robot gripper.
+00:28. Action: Toggle on faucet. Visual observation: pot (filled with water and clean), faucet (turned on), sink. pot is inside sink. pot is on the right of soap bottle. nothing is inside robot gripper. Auditory observation: water runs in sink.
+00:31. Action: Toggle off faucet. Visual observation: pot (filled with water and clean), faucet (turned off), sink. pot is inside sink. pot is on the right of soap bottle. nothing is inside robot gripper.
+00:39. Action: Move to fourth stove burner. Visual observation: first stove burner (turned off), second stove burner (turned off), fourth stove burner (turned off), third stove burner (turned off). nothing is inside robot gripper.
+00:40. Action: Move to fourth stove burner. Visual observation: first stove burner (turned off), second stove burner (turned off), fourth stove burner (turned off), third stove burner (turned off). nothing is inside robot gripper.
+00:41. Action: Put pot on fourth stove burner. Visual observation: first stove burner (turned off), second stove burner (turned off), fourth stove burner (turned off), third stove burner (turned off). nothing is inside robot gripper.
+00:44. Action: Toggle on fourth stove burner. Visual observation: first stove burner (turned off), fourth stove burner (turned on), second stove burner (turned off), third stove burner (turned off). nothing is inside robot gripper. Auditory observation: stove burner turns on.

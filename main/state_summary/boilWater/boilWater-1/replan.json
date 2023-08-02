@@ -1,0 +1,1 @@
+{"original_plan": ["1. (pick_up, pot)", "2. (put_on, pot, fourth stove burner)", "3. (toggle_on, fourth stove burner)"], "plan": ["(pick_up, Pot)", "(put_on, Pot, StoveBurner-4)", "(toggle_on, StoveBurner-4)"], "num_steps": 3, "success": true}

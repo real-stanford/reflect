@@ -1,0 +1,230 @@
+{
+    "Task 1": {
+        "name": "make coffee",
+        "task_idx": 5,
+        "num_samples": 1,
+        "failure_injection": false,
+        "folder_name": "makeCoffee-1",
+        "scene": "FloorPlan16",
+        "chosen_failure": "occupied",
+        "gt_failure_reason": "The robot failed to put the mug inside the coffee machine because there was already a cup inside it, occupying the space.",
+        "gt_failure_step": "00:51",
+        "preactions": [
+            "(dirty_obj, Mug)"
+        ],
+        "failure_injection_params" : {
+            "src_obj_type": "Cup",
+            "target_obj_type": "CoffeeMachine",
+            "disp_x": 0.0,
+            "disp_z": 0.05,
+            "disp_y": 0.02
+        },
+        "actions": [
+            "(navigate_to_obj, Mug)",
+            "(pick_up, Mug)",
+            "(navigate_to_obj, Sink)",
+            "(put_on, Mug, SinkBasin)",
+            "(toggle_on, Faucet)",
+            "(toggle_off, Faucet)",
+            "(pick_up, Mug)",
+            "(pour, Mug, Sink)",
+            "(navigate_to_obj, CoffeeMachine)",
+            "(put_in, Mug, CoffeeMachine)",
+            "(toggle_on, CoffeeMachine)",
+            "(toggle_off, CoffeeMachine)",
+            "(pick_up, Mug)",
+            "(put_on, Mug, CounterTop)"
+        ],
+        "success_condition": "a clean mug is filled with coffee and on top of the countertop."
+    },
+    "Task 2": {
+        "name": "boil water",
+        "task_idx": 1,
+        "num_samples": 1,
+        "failure_injection": false,
+        "folder_name": "boilWater-1",
+        "scene": "FloorPlan1",
+        "gt_failure_reason": "The robot did not pick up the pot from sink before moving to stove burner.",
+        "gt_failure_step": [["00:31", "00:41"]],
+        "actions": [
+            "(navigate_to_obj, Pot)",
+            "(pick_up, Pot)",
+            "(navigate_to_obj, Sink)",
+            "(put_in, Pot, Sink)",
+            "(toggle_on, Faucet)",
+            "(toggle_off, Faucet)",
+            "(navigate_to_obj, StoveBurner-4)",
+            "(put_on, Pot, StoveBurner-4)",
+            "(toggle_on, StoveBurner-4)"
+        ],
+        "success_condition": "a pot is filled with water, the pot is on top of a stove burner that is turned on."
+    },
+    "Task 3": {
+        "name": "heat potato",
+        "task_idx": 4,
+        "num_samples": 1,
+        "failure_injection": false,
+        "folder_name": "heatPotato-1",
+        "scene": "FloorPlan16",
+        "gt_failure_reason": "The robot should not toggle on the microwave before trying to open it. As a result, the robot cannot open a microwave that is turned on.",
+        "gt_failure_step": [["01:33", "01:36"]],
+        "actions": [
+            "(navigate_to_obj, Potato)",
+            "(pick_up, Potato)",
+            "(put_on, Potato, Plate)",
+            "(pick_up, Plate)",
+            "(navigate_to_obj, Microwave)",
+            "(put_on, Plate, CounterTop)",
+            "(toggle_on, Microwave)",
+            "(open_obj, Microwave)",
+            "(pick_up, Plate)",
+            "(put_in, Plate, Microwave)",
+            "(close_obj, Microwave)"
+        ],
+        "success_condition": "a potato is on a plate and inside a microwave that is turned on."
+    },
+    "Task 4": {
+        "name": "heat potato",
+        "task_idx": 4,
+        "failure_injection": false,
+        "num_samples": 1,
+        "folder_name": "heatPotato-2",
+        "chosen_failure": "occupied_put",
+        "scene": "FloorPlan16",
+        "gt_failure_reason": "A bowl is already inside the microwave, as a result, the plate cannot be put inside the microwave due to limited space.",
+        "gt_failure_step": "01:57",
+        "failure_injection_params" : {
+            "src_obj_type": "Bowl",
+            "target_obj_type": "Microwave"
+        },
+        "actions": [
+            "(navigate_to_obj, Potato)",
+            "(pick_up, Potato)",
+            "(put_on, Potato, Plate)",
+            "(pick_up, Plate)",
+            "(navigate_to_obj, Microwave)",
+            "(put_on, Plate, CounterTop)",
+            "(open_obj, Microwave)",
+            "(pick_up, Plate)",
+            "(put_in, Plate, Microwave)",
+            "(close_obj, Microwave)",
+            "(toggle_on, Microwave)"
+        ],
+        "success_condition": "a potato is on a plate and inside a microwave that is turned on."
+    },
+    "Task 5": {
+        "name": "boil water",
+        "task_idx": 1,
+        "num_samples": 1,
+        "failure_injection": false,
+        "chosen_failure": "ambiguous_plan",
+        "folder_name": "boilWater-2",
+        "scene": "FloorPlan1",
+        "gt_failure_reason": "The robot put the pot on the fourth stove burner but toggled on the second stove burner (instead of the fourth stove burner).",
+        "gt_failure_step": "00:46",
+        "failure_injection_params": {
+            "ambi_obj_type": "StoveBurner"
+        },
+        "actions": [
+            "(navigate_to_obj, Pot)",
+            "(pick_up, Pot)",
+            "(navigate_to_obj, Sink)",
+            "(put_in, Pot, Sink)",
+            "(toggle_on, Faucet)",
+            "(toggle_off, Faucet)",
+            "(pick_up, Pot)",
+            "(navigate_to_obj, StoveBurner)",
+            "(put_on, Pot, StoveBurner-4)",
+            "(toggle_on, StoveBurner-2)"
+        ],
+        "success_condition": "a pot is filled with water, the pot is on top of a stove burner that is turned on."
+    },
+    "Task 6": {
+        "name": "make coffee",
+        "task_idx": 5,
+        "num_samples": 2,
+        "failure_injection": true,
+        "chosen_failure": "drop",
+        "folder_name": "R-makeCoffee",
+        "scene": "FloorPlan16",
+        "preactions": [
+            "(dirty_obj, Mug)"
+        ],
+        "actions": [
+            "(navigate_to_obj, Mug)",
+            "(pick_up, Mug)",
+            "(navigate_to_obj, Sink)",
+            "(put_on, Mug, SinkBasin)",
+            "(toggle_on, Faucet)",
+            "(toggle_off, Faucet)",
+            "(pick_up, Mug)",
+            "(pour, Mug, Sink)",
+            "(navigate_to_obj, CoffeeMachine)",
+            "(put_in, Mug, CoffeeMachine)",
+            "(toggle_on, CoffeeMachine)",
+            "(toggle_off, CoffeeMachine)",
+            "(pick_up, Mug)",
+            "(put_on, Mug, CounterTop)"
+        ],
+        "success_condition": "a clean mug is filled with coffee and on top of the countertop."
+    },
+    "Task 7": {
+        "name": "boil water",
+        "task_idx": 1,
+        "num_samples": 1,
+        "failure_injection": false,
+        "folder_name": "boilWater-3",
+        "chosen_failure": "wrong_perception",
+        "scene": "FloorPlan1",
+        "gt_failure_reason": "The robot mis-identified pan as pot, and picked up the pan instead of the pot.",
+        "gt_failure_step": "00:24",
+        "failure_injection_params" : {
+            "correct_obj_type": "Pot",
+            "wrong_obj_type": "Pan"
+        },
+        "actions": [
+            "(navigate_to_obj, Pot)",
+            "(pick_up, Pot)",
+            "(navigate_to_obj, Sink)",
+            "(put_in, Pot, Sink)",
+            "(toggle_on, Faucet)",
+            "(toggle_off, Faucet)",
+            "(pick_up, Pot)",
+            "(navigate_to_obj, StoveBurner-4)",
+            "(put_on, Pot, StoveBurner-4)",
+            "(toggle_on, StoveBurner-4)"
+        ],
+        "success_condition": "a pot is filled with water, the pot is on top of a stove burner that is turned on."
+    },
+    "Task 8": {
+        "name": "toast bread",
+        "task_idx": 2,
+        "num_samples": 1,
+        "failure_injection": false,
+        "folder_name": "toastBread-2",
+        "scene": "FloorPlan2",
+        "chosen_failure": "blocking",
+        "gt_failure_reason": "The robot cannot pick up knife due to the pot occluding the knife.",
+        "gt_failure_step": "00:23",
+        "failure_injection_params" : {
+            "blocked_obj_type": "Knife",
+            "src_obj_type": "Knife",
+            "target_obj_type": "Pot",
+            "disp_x": 0.05,
+            "disp_z": -0.25,
+            "disp_y": 0.05
+        },
+        "actions": [
+            "(navigate_to_obj, Knife)",
+            "(pick_up, Knife)",
+            "(navigate_to_obj, Bread)",
+            "(slice_obj, Bread)",
+            "(put_on, Knife, CounterTop-2)",
+            "(pick_up, BreadSliced)",
+            "(navigate_to_obj, Toaster)",
+            "(put_in, BreadSliced, Toaster)",
+            "(toggle_on, Toaster)"
+        ],
+        "success_condition": "bread slice is inside the toaster and toaster is turned on."
+    }
+}

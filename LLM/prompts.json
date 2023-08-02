@@ -1,0 +1,88 @@
+{
+    "subgoal-verifier": {
+        "template-system": "You are a success verifier that outputs 'Yes' or 'No' to indicate whether the robot goal is satisfied given the robot observations.",
+        "template-user": "The robot goal is to [SUBGOAL]. Here are the robot observations after execution:\n[OBSERVATION]\nQ: Is the goal satisfied?\nA:",
+        "params": {
+            "max_tokens": 256,
+            "temperature": 0.0,
+            "top_p": 1,
+            "frequency_penalty": 0.0,
+            "presence_penalty": 0.0,
+            "stop": [",", "."]
+        },
+        "save": false
+    },
+    "reasoning-execution": {
+        "template-system": "You are expected to provide explanation for a robot failure. You are given the robot actions and observations so far. Briefly explain the failure in 1-2 sentence. Mention relevant time steps if possible.",
+        "template-user": "The robot task is to [TASK_NAME]. At [STEP], a failure was identified.\n\n[Robot actions and observations before [STEP]]\n[SUMMARY]\n[Observation at the end of [STEP]]\n[OBSERVATION]\nQ: Infer from [Robot actions and observations before [STEP]] or [Observation at the end of [STEP]], briefly explain what happened at [STEP] and what caused the failure.\nA:",
+        "params": {
+            "max_tokens": 256,
+            "temperature": 0.0,
+            "top_p": 1,
+            "frequency_penalty": 0.0,
+            "presence_penalty": 0.0
+        },
+        "save": true
+    },
+    "reasoning-execution-steps": {
+        "template-system": "",
+        "template-user": "[FAILURE_REASON]\nQ: Extract time steps from the above sentence (separated by comma).\n A:",
+        "params": {
+            "max_tokens": 256,
+            "temperature": 0.0,
+            "top_p": 1,
+            "frequency_penalty": 0.0,
+            "presence_penalty": 0.0
+        },
+        "save": false
+    },
+    "reasoning-execution-no-history": {
+        "template-system": "You are expected to provide explanation for a robot failure. You are given robot observations so far. Briefly explain the failure in 1-2 sentence.",
+        "template-user": "The robot task is to [TASK_NAME]. At [STEP], a failure was identified.\n\n[Observation at the end of [STEP]]\n[OBSERVATION]\nQ: Infer from [Observation at the end of [STEP]], briefly explain what happened at [STEP] and what caused the failure.\nA:",
+        "params": {
+            "max_tokens": 256,
+            "temperature": 0.0,
+            "top_p": 1,
+            "frequency_penalty": 0.0,
+            "presence_penalty": 0.0
+        },
+        "save": true
+    },
+    "reasoning-plan": {
+        "template-system": "You are expected to provide explanation for a robot failure. You are given the current robot state, the goal condition, and the robot plan. Briefly explain what was wrong with the robot plan in 1-2 sentence.",
+        "template-user": "The robot task is to [TASK_NAME]. The task is considered successful if [SUCCESS_CONDITION]\nHere's the robot observation at the end of the task execution:\n[CURRENT_STATE]\nThe robot plan is:\n[OBSERVATION]\nQ: Known that all actions in the robot plan were executed successfully, what's wrong with the robot plan that caused the robot to fail?\nA:",
+        "params": {
+            "max_tokens": 256,
+            "temperature": 0.0,
+            "top_p": 1,
+            "frequency_penalty": 0.0,
+            "presence_penalty": 0.0
+        },
+        "save": true
+    },
+    "reasoning-plan-steps": {
+        "template-system": "Given the identified failure reason, you are expected to output an earliest time step that is relevant to the failure. You must output a time step.",
+        "template-user": "[PREV_PROMPT]\nQ: Which time step is most relevant to the above failure?\nA:",
+        "params": {
+            "max_tokens": 256,
+            "temperature": 0.0,
+            "top_p": 1,
+            "frequency_penalty": 0.0,
+            "presence_penalty": 0.0,
+            "stop": [",", "."]
+        },
+        "save": false
+    },
+    "correction": {
+        "template-system": "[PREFIX]",
+        "template-user": "Task: [TASK_NAME]\nInitial plan:\n[PLAN]\nFailure reason: [FAILURE_REASON]\nCurrent state: [CURRENT_STATE]\nSuccess state: [SUCCESS_CONDITION]\nCorrection plan:",
+        "params": {
+            "max_tokens": 256,
+            "temperature": 0.0,
+            "top_p": 1,
+            "frequency_penalty": 0.5,
+            "presence_penalty": 0.3
+        },
+        "save": true
+    }
+}

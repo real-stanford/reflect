@@ -1,0 +1,6 @@
+main/__pycache__
+main/projection/__pycache__
+LLM/__pycache__
+main/thor_tasks
+main/state_summary
+main/recovery

@@ -1,0 +1,25 @@
+00:01. Action: Move to mug. Visual observation: nothing is inside robot gripper.
+00:13. Action: Move to mug. Visual observation: faucet (turned off). nothing is inside robot gripper.
+00:14. Action: Move to mug. Visual observation: mug (empty and dirty), faucet (turned off), sink. mug is inside sink. nothing is inside robot gripper.
+00:17. Action: Pick up mug. Visual observation: mug (empty and dirty), faucet (turned off), sink. mug is inside robot gripper.
+00:19. Action: Move to sink. Visual observation: mug (empty and dirty), faucet (turned off), sink, coffee machine (turned off). mug is inside robot gripper.
+00:21. Action: Move to sink. Visual observation: mug (empty and dirty), faucet (turned off), sink, coffee machine (turned off). mug is inside robot gripper.
+00:24. Action: Move to sink. Visual observation: mug (empty and dirty), faucet (turned off), sink, coffee machine (turned off). mug is inside robot gripper.
+00:29. Action: Put mug inside sink. Visual observation: mug (empty and dirty), faucet (turned off), sink, coffee machine (turned off). mug is inside sink. nothing is inside robot gripper.
+00:32. Action: Toggle on faucet. Visual observation: mug (empty and dirty), faucet (turned on), sink, coffee machine (turned off). mug is inside sink. nothing is inside robot gripper. Auditory observation: water runs in sink.
+00:35. Action: Toggle off faucet. Visual observation: faucet (turned off), coffee machine (turned off), sink, mug (filled with water and clean). mug is inside sink. nothing is inside robot gripper.
+00:38. Action: Pick up mug. Visual observation: faucet (turned off), coffee machine (turned off), sink, mug (filled with water and clean). mug is inside robot gripper.
+00:41. Action: Move to coffee machine. Visual observation: faucet (turned off), mug (empty and clean), sink, coffee machine (turned off). cup is inside coffee machine. mug is inside robot gripper.
+00:43. Action: Move to coffee machine. Visual observation: mug (empty and clean), sink, coffee machine (turned off). cup is inside coffee machine. mug is inside robot gripper.
+00:45. Action: Move to coffee machine. Visual observation: mug (empty and clean), coffee machine (turned off). mug is inside robot gripper.
+00:47. Action: Move to coffee machine. Visual observation: faucet (turned off), mug (empty and clean), sink, coffee machine (turned off). cup is inside coffee machine. mug is inside robot gripper.
+00:48. Action: Move to coffee machine. Visual observation: faucet (turned off), mug (empty and clean), sink, coffee machine (turned off). cup is inside coffee machine. mug is inside robot gripper.
+00:51. Action: Put mug inside coffee machine. Visual observation: faucet (turned off), mug (empty and clean), sink, coffee machine (turned off). cup is inside coffee machine. mug is inside robot gripper.
+00:54. Action: Toggle on coffee machine. Visual observation: faucet (turned off), coffee machine (turned on), mug (empty and clean), sink. cup is inside coffee machine. mug is inside robot gripper. Auditory observation: coffee machine turns on.
+00:57. Action: Toggle off coffee machine. Visual observation: faucet (turned off), mug (empty and clean), sink, coffee machine (turned off). cup is inside coffee machine. mug is inside robot gripper.
+01:00. Action: Pick up mug. Visual observation: faucet (turned off), mug (empty and clean), sink, coffee machine (turned off). cup is inside coffee machine. mug is inside robot gripper.
+01:08. Action: Move to countertop. Visual observation: mug (empty and clean), sink, coffee machine (turned off). mug is inside robot gripper.
+01:10. Action: Move to countertop. Visual observation: mug (empty and clean), sink. mug is inside robot gripper.
+01:12. Action: Move to countertop. Visual observation: mug (empty and clean). mug is inside robot gripper.
+01:14. Action: Move to countertop. Visual observation: mug (empty and clean). mug is inside robot gripper.
+01:19. Action: Put mug on countertop. Visual observation: mug (empty and clean). mug is on the right of butter knife. mug is on top of first countertop. nothing is inside robot gripper.
