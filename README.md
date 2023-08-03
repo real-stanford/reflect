@@ -35,7 +35,7 @@ python -m pip install git+https://github.com/openai/CLIP.git
 ```
 
 The dependencies have been tested on `Ubuntu 20.04.6 LTS, Python 3.9.13`.
-We provide a [demo colab](https://github.com/lzylucy/reflect/blob/main/demo.ipynb) that shows how one can generate failure data in the AI2THOR simulation and use the REFLECT framework to analyze and correct the failures. 
+We provide a [demo colab](https://github.com/columbia-ai-robotics/reflect/blob/main/demo.ipynb) that shows how one can generate failure data in the AI2THOR simulation and use the REFLECT framework to analyze and correct the failures.
 
 Issues or pull requests are welcome!
 
@@ -43,11 +43,12 @@ Issues or pull requests are welcome!
 Here are few suggestions for extending the framework:
 1. Generate more failure scenarios (more tasks, more scenes, more failure types) in either simulation or real world.
 2. Improve the current perception module by integrating latest vision/audio models that could increase accuracy or capture more low-level information about the environment.
-- [Object detection] You may replace the ground truth object detection obtained from simulation with your own object detector [here](https://github.com/lzylucy/reflect/blob/736dfd79f06775e1374b6090b3aad953b8a11cb5/main/get_local_sg.py#L38).
-- [Object state] The codebase supports ground truth object states obtained from simulation and state detection using [CLIP](https://github.com/openai/CLIP). You may replace it with your own method [here](https://github.com/lzylucy/reflect/blob/736dfd79f06775e1374b6090b3aad953b8a11cb5/main/scene_graph.py#L291C55-L291C55).
-- [Spatial relations] The codebase uses heuristics on object point clouds to compute inter-object spatial relations. You may replace it with your own method [here](https://github.com/lzylucy/reflect/blob/736dfd79f06775e1374b6090b3aad953b8a11cb5/main/scene_graph.py#L246).
-- [Audio] The codebase uses [WAV2CLIP](https://github.com/descriptinc/lyrebird-wav2clip) for audio detection. You may replace it with your own model [here](https://github.com/lzylucy/reflect/blob/736dfd79f06775e1374b6090b3aad953b8a11cb5/main/audio.py#L32).
-3. More applications of the robot experience summary, such as safety or efficiency analysis of robot behaviors, or for human-robot collaboration.
+- [Object detection] You may replace the ground truth object detection obtained from simulation with your own object detector [here](https://github.com/columbia-ai-robotics/reflect/blob/5736f88cade931bfcf670df82e38580d9c538771/main/get_local_sg.py#L38).
+- [Object state] The codebase supports ground truth object states obtained from simulation and state detection using [CLIP](https://github.com/openai/CLIP). You may replace it with your own method [here](https://github.com/columbia-ai-robotics/reflect/blob/5736f88cade931bfcf670df82e38580d9c538771/main/scene_graph.py#L291).
+- [Spatial relations] The codebase uses heuristics on object point clouds to compute inter-object spatial relations. You may replace it with your own method [here](https://github.com/columbia-ai-robotics/reflect/blob/5736f88cade931bfcf670df82e38580d9c538771/main/scene_graph.py#L246).
+- [Audio] The codebase uses [WAV2CLIP](https://github.com/descriptinc/lyrebird-wav2clip) for audio detection. You may replace it with your own model [here](https://github.com/columbia-ai-robotics/reflect/blob/main/main/audio.py).
+3. Integrate the framework with an existing policy.
+4. More applications of the robot experience summary, such as safety or efficiency analysis of robot behaviors, or for human-robot collaboration.
 
 Feel free to contact [Zeyi](https://lzylucy.github.io/) at `liuzeyi [at] stanford [dot] edu` if you have ideas to extend the framework or applying it on new tasks!
 
