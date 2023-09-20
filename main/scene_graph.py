@@ -134,10 +134,10 @@ def get_gt_object_state(node_name, event):
 
 class Node(object):
     def __init__(self, name, object_id=None, pos3d=None, corner_pts=None, bbox2d=None, pcd=None, depth=None, global_node=False):
-        self.name = name # bowl
-        self.object_id = object_id # ai2thor object_id of bowl
+        self.name = name
+        self.object_id = object_id # ai2thor object_id
         self.bbox2d = bbox2d # 2d bounding box (4x1)
-        self.pos3d = pos3d # just position (no orientation) of the object (3x1)
+        self.pos3d = pos3d # object position
         self.corner_pts = corner_pts # corner points of 3d bbox (8x3)
         self.pcd = pcd # point cloud (px3)
         self.depth = depth
